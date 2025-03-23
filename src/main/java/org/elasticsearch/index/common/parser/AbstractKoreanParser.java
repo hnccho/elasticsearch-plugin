@@ -11,7 +11,6 @@ import org.elasticsearch.index.common.util.JamoUtil;
  */
 public abstract class AbstractKoreanParser {
     
-    
     /**
      * 토큰을 자음과 모음으로 파싱한다.
      * 
@@ -19,7 +18,8 @@ public abstract class AbstractKoreanParser {
      * @return
      */
     public String parse(String token) {
-        if (StringUtils.isBlank(token)) {
+
+    	if (StringUtils.isBlank(token)) {
             return "";
         }
 
@@ -62,7 +62,6 @@ public abstract class AbstractKoreanParser {
         return result.toString();
     }
     
-
     /**
      * 한글 문자를 처리한다.
      * 
@@ -73,7 +72,6 @@ public abstract class AbstractKoreanParser {
      */
     protected abstract void processForKoreanChar(StringBuilder sb, char chosung, char jungsung, char jongsung);
     
-    
     /**
      * 한글 문자를 제외한 일반 문자를 처리한다.
      * 
@@ -81,7 +79,5 @@ public abstract class AbstractKoreanParser {
      * @param eachToken
      */
     protected abstract void processForOther(StringBuilder sb, char eachToken);
-
-
-    
+   
 }

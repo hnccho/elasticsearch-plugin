@@ -12,7 +12,6 @@ import java.util.List;
  */
 public class HangulUtil {
 
-
     /**
      * 초성 (19자)
      */
@@ -21,7 +20,6 @@ public class HangulUtil {
             'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'
     };
 
-
     /**
      * 중성 (21자)
      */
@@ -29,7 +27,6 @@ public class HangulUtil {
             'ㅏ', 'ㅐ', 'ㅑ', 'ㅒ', 'ㅓ', 'ㅔ', 'ㅕ', 'ㅖ', 'ㅗ', 'ㅘ', 
             'ㅙ', 'ㅚ', 'ㅛ', 'ㅜ', 'ㅝ', 'ㅞ', 'ㅟ', 'ㅠ', 'ㅡ', 'ㅢ', 'ㅣ'
     };
-  
     
     /**
      * 종성 (28자) - "빈값" 포함
@@ -40,7 +37,6 @@ public class HangulUtil {
             'ㅆ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'
     };
     
-    
     /**
      * 한글 유니코드의 시작값 (가)
      * 
@@ -49,14 +45,10 @@ public class HangulUtil {
      * 
      */
     public static final int START_KOREA_UNICODE_DECIMAL = 44032;
-
-
-
-
-    
     
     public static int getOneHangulJamoSize(int startIdx, List<String> jamoList) {
-        int remainJamoSize = jamoList.size() - startIdx;
+
+    	int remainJamoSize = jamoList.size() - startIdx;
         
         if (remainJamoSize == 1) {
             return -1;
@@ -77,8 +69,7 @@ public class HangulUtil {
 
         return 3;
     }
-    
-    
+        
     public static int getChoSungIndex(int startIdx, List<String> jamoList) {
         String strChoSung = new String(CHO_SUNG);
         String strChoSungChar = jamoList.get(startIdx);
@@ -86,24 +77,20 @@ public class HangulUtil {
         return strChoSung.indexOf(strChoSungChar);
     }
     
-    
     public static int getJungSungIndex(int startIdx, List<String> jamoList) {
         String strJungSung = new String(HangulUtil.JUNG_SUNG);
         String strJungSungChar = jamoList.get(startIdx + 1);
         
         return strJungSung.indexOf(strJungSungChar);
     }
-    
-    
+        
     public static int getJongSungIndex(int startIdx, List<String> jamoList) {
         String strJongSung = new String(HangulUtil.JONG_SUNG);
         String strJongSungChar = jamoList.get(startIdx + 2);
         
         return strJongSung.indexOf(strJongSungChar);
     }
-    
-    
-    
+        
 }
 
 

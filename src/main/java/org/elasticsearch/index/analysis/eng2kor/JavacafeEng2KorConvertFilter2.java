@@ -23,7 +23,6 @@ public final class JavacafeEng2KorConvertFilter2 extends TokenFilter {
     private PositionIncrementAttribute positionIncrementAttribute;
     
     private Queue<char[]> simpleQueue;
-
     
     public JavacafeEng2KorConvertFilter2(TokenStream stream) {
         super(stream);
@@ -34,8 +33,7 @@ public final class JavacafeEng2KorConvertFilter2 extends TokenFilter {
         
         this.simpleQueue = new LinkedList<char[]>();       
     }
-
-    
+   
     @Override
     public boolean incrementToken() throws IOException {
         
@@ -44,20 +42,16 @@ public final class JavacafeEng2KorConvertFilter2 extends TokenFilter {
             termAtt.setEmpty();
             termAtt.copyBuffer(buffer, 0, buffer.length);
             positionIncrementAttribute.setPositionIncrement(0);
-            
             return true;
         }
         
         if (!input.incrementToken()) {
             return false;
-            
         } else {
             String result = converter.convert(termAtt.toString());
             simpleQueue.add(result.toCharArray());
             return true;
         }
     }
-    
-    
 
 }

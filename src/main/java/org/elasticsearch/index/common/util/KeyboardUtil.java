@@ -14,14 +14,11 @@ import org.elasticsearch.index.common.type.CodeType;
  */
 public class KeyboardUtil {
 
-    
     /**
      * Converter 진행시 무시되는 문자들
      */
     public static final String IGNORE_CHAR = "`1234567890-=[]\\;',./~!@#$%^&*()_+{}|:\"<>?\' \' ";
 
-    
-    
     /**
      * 초성 키에 해당하는 키보드상의 영문자 (19자)
      */
@@ -47,8 +44,6 @@ public class KeyboardUtil {
             "d", "w", "c", "z", "x", "v", "g"
     };
         
-
-
     /**
      * 키보드상에서 한영키에 의해서 오타 교정이 필요한 키배열 (영문키 33자)
      */
@@ -69,10 +64,6 @@ public class KeyboardUtil {
             "ㅆ", "ㅒ", "ㅖ"
     };
    
-    
-    
-    
-
     /**
      * 초성 정보를 제공한다.
      * 
@@ -84,7 +75,8 @@ public class KeyboardUtil {
      * @return
      */
     public static Map<String, Integer> getInfoForChoSung(int index, String word) {  
-        int code = KeyboardUtil.makeUnicodeIndex(CodeType.CHOSUNG, word.substring(index, index + 1));
+
+    	int code = KeyboardUtil.makeUnicodeIndex(CodeType.CHOSUNG, word.substring(index, index + 1));
         int idx = index + 1;
         
         Map<String, Integer> m = new HashMap<>();
@@ -106,7 +98,8 @@ public class KeyboardUtil {
      * @return
      */
     public static Map<String, Integer> getInfoForJungSung(int index, String word) {
-        int code = KeyboardUtil.getDoubleMedial(index, word);
+
+    	int code = KeyboardUtil.getDoubleMedial(index, word);
         int idx = index + 2;
         
         if (-1 == code) {
@@ -120,7 +113,6 @@ public class KeyboardUtil {
 
         return m;
     }
-
     
     /**
      * 종성 정보를 제공한다.
@@ -133,7 +125,8 @@ public class KeyboardUtil {
      * @return
      */
     public static Map<String, Integer> getInfoForJongSung(int index, String word) {
-        int code;
+
+    	int code;
         int idx = index;
         
         int temp = KeyboardUtil.getDoubleFinal(idx, word);
@@ -167,9 +160,6 @@ public class KeyboardUtil {
 
         return m;
     }
-    
-    
-   
     
     /**
      * 1자로 구성된 중성 유니코드 Index를 리턴한다.
@@ -271,9 +261,6 @@ public class KeyboardUtil {
 
         return -1;
     } 
-    
-  
-    
     
 }
 

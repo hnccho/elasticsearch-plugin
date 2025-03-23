@@ -13,7 +13,6 @@ import org.elasticsearch.index.common.util.KeyboardUtil;
  */
 public class EngToKorConverter {
       
-    
     /**
      * 토큰을 영문 키보드 기준으로 변환한다.
      * 
@@ -57,14 +56,7 @@ public class EngToKorConverter {
                 
             } catch(Exception e) {}
         }
-        
         return sb.toString();
     }
-    
-    
-    
-    
-
-    
     
 }

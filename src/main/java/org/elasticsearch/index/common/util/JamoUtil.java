@@ -10,7 +10,6 @@ package org.elasticsearch.index.common.util;
  */
 public class JamoUtil {
 
-    
     /**
      * 초성 (19자)<br>
      * <br>
@@ -26,7 +25,6 @@ public class JamoUtil {
             0x3146, 0x3147, 0x3148, 0x3149, 0x314A, 0x314B, 0x314C, 0x314D, 0x314E
     };
 
-    
     /**
      * 중성 (21자)<br>
      * <br>
@@ -43,7 +41,6 @@ public class JamoUtil {
             0x3159, 0x315A, 0x315B, 0x315C, 0x315D, 0x315E, 0x315F, 0x3160, 0x3161, 0x3162,
             0x3163
     };
-
     
     /**
      * 종성 (28자)<br>
@@ -61,8 +58,6 @@ public class JamoUtil {
             0x313B, 0x313C, 0x313D, 0x313E, 0x313F, 0x3140, 0x3141, 0x3142, 0x3144, 0x3145,
             0x3146, 0x3147, 0x3148, 0x314A, 0x314B, 0x314C, 0x314D, 0x314E
     };
-
-
     
     /**
      * 한글 유니코드의 시작값 (가)<br>
@@ -74,16 +69,11 @@ public class JamoUtil {
      * 끝값   : 0xD79F 힟<br>
      */
     public static final char START_KOREA_UNICODE = 0xAC00;
-    
-    
 
     /**
      * 종성 빈값 유니코드
      */
     public static final char UNICODE_JONG_SUNG_EMPTY = 0x0000;
-    
-
-    
     
 }
 

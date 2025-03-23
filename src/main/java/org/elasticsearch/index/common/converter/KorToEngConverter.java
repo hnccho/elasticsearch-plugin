@@ -13,7 +13,6 @@ import org.elasticsearch.index.common.util.KeyboardUtil;
  */
 public class KorToEngConverter {
 
-          
     /**
      * 토큰을 한글 키보드 기준으로 변환한다.
      * 
@@ -50,7 +49,6 @@ public class KorToEngConverter {
                         sb.append(strCho);
                     }
                     
-
                     int jung = initUnicode / 28 % 21;   // 0 ~ 20
                     String strJung = getSameEngChar(CodeType.JUNGSUNG, jung);
                     if (StringUtils.isNotEmpty(strJung)) {
@@ -76,9 +74,6 @@ public class KorToEngConverter {
         return sb.toString();
     }
     
-    
-    
-
     private String getSameEngChar(CodeType type, int pos) {
         switch (type) {
             case CHOSUNG:
@@ -93,10 +88,8 @@ public class KorToEngConverter {
                 }
                 return "";
         }
-
         return "";
     }
-    
 
     private String getSameEngCharForJamo(String key, int pos) {
         for (int i=0; i<KeyboardUtil.KEYBOARD_KEY_KOR.length; i++) {
@@ -104,11 +97,8 @@ public class KorToEngConverter {
                 return KeyboardUtil.KEYBOARD_KEY_ENG[i];
             }
         }
-        
         return "";
     }
-    
-    
     
 }
 

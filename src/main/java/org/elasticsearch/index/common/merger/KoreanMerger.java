@@ -19,8 +19,8 @@ public class KoreanMerger {
      * @throws Exception
      */
     public String merge(List<String> jamoList) throws Exception {
-        String result = "";
 
+    	String result = "";
         if (jamoList.size() == 0) {
             return "";
         }
@@ -69,11 +69,8 @@ public class KoreanMerger {
             
             startIdx = startIdx + oneHangulJamoSize;
         }
-
         return result;
     }
-
-    
     
 }
 

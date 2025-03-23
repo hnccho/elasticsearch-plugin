@@ -10,22 +10,20 @@
 
     <packaging>jar</packaging>
 
-    <!-- 로컬에서는 테스트 문제로 6.2.2를 사용하자 -->
     <properties>
-        <elasticsearch.version>6.4.3</elasticsearch.version>
-        <!-- 		<elasticsearch.version>6.2.2</elasticsearch.version> -->
-        <lucene.version>7.2.1</lucene.version>
+        <elasticsearch.version>7.17.27</elasticsearch.version>
+        <lucene.version>8.11.3</lucene.version>
     </properties>
 
-
-
     <dependencies>
+
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
             <version>${elasticsearch.version}</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-core</artifactId>
@@ -33,6 +31,7 @@
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-core</artifactId>
@@ -53,7 +52,6 @@
             <scope>provided</scope>
         </dependency>
 
-
         <!-- 추후 scope를 test로 변경 -->
         <dependency>
             <groupId>org.elasticsearch.test</groupId>
@@ -67,7 +65,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
 
         <!-- 추후 scope를 test로 변경 -->
         <dependency>
@@ -84,8 +81,6 @@
         </dependency>
 
     </dependencies>
-
-
 
     <build>
         <finalName>javacafe-analyzer-${elasticsearch.version}</finalName>
