@@ -1,7 +1,7 @@
-package org.elasticsearch.index.common.parser;
+package org.javacafe.index.common.parser;
 
 import org.apache.commons.lang3.StringUtils;
-import org.elasticsearch.index.common.util.JamoUtil;
+import org.javacafe.index.common.util.JamoUtil;
 
 /**
  * 한글 기본 Parser

@@ -1,9 +1,9 @@
-package org.elasticsearch.index.common.converter;
+package org.javacafe.index.common.converter;
 
 import java.util.Map;
 
-import org.elasticsearch.index.common.util.JamoUtil;
-import org.elasticsearch.index.common.util.KeyboardUtil;
+import org.javacafe.index.common.util.JamoUtil;
+import org.javacafe.index.common.util.KeyboardUtil;
 
 /**
  * 영한 오타 변환기 (Eng -> Kor)

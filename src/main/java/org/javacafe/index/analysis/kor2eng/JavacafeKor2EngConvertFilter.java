@@ -1,11 +1,11 @@
-package org.elasticsearch.index.analysis.kor2eng;
+package org.javacafe.index.analysis.kor2eng;
 
 import java.io.IOException;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
-import org.elasticsearch.index.common.converter.KorToEngConverter;
+import org.javacafe.index.common.converter.KorToEngConverter;
 
 /**
  * 한영 변환 필터

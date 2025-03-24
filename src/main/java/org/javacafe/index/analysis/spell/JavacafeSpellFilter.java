@@ -1,24 +1,24 @@
-package org.elasticsearch.index.analysis.jamo;
+package org.javacafe.index.analysis.spell;
 
 import java.io.IOException;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
-import org.elasticsearch.index.common.parser.KoreanJamoParser;
+import org.javacafe.index.common.parser.KoreanJamoParser;
 
 /**
- * 한글 자모 분석 필터
+ * 스펠링 체크 필터
  *
  * @author hrkim
  *
  */
-public final class JavacafeJamoTokenFilter extends TokenFilter {
+public final class JavacafeSpellFilter extends TokenFilter {
     
     private KoreanJamoParser parser;
     private CharTermAttribute termAtt;
-
-    public JavacafeJamoTokenFilter(TokenStream stream) {
+    
+    public JavacafeSpellFilter(TokenStream stream) {
         super(stream);
         this.parser = new KoreanJamoParser();
         this.termAtt = addAttribute(CharTermAttribute.class);
@@ -36,7 +36,7 @@ public final class JavacafeJamoTokenFilter extends TokenFilter {
             termAtt.append(parserdData);
             return true;
         }
-        return false;
+         return false;
     }
     
 }

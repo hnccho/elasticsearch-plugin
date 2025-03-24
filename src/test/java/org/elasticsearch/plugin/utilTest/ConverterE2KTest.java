@@ -2,7 +2,7 @@ package org.elasticsearch.plugin.utilTest;
 
 import static org.junit.Assert.assertEquals;
 
-import org.elasticsearch.index.common.converter.EngToKorConverter;
+import org.javacafe.index.common.converter.EngToKorConverter;
 import org.junit.Test;
 
 public class ConverterE2KTest {

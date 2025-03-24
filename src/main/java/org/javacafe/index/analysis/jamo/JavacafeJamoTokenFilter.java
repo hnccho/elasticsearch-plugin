@@ -1,31 +1,31 @@
-package org.elasticsearch.index.analysis.chosung;
+package org.javacafe.index.analysis.jamo;
 
 import java.io.IOException;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
-import org.elasticsearch.index.common.parser.KoreanChosungParser;
+import org.javacafe.index.common.parser.KoreanJamoParser;
 
 /**
- * 한글 초성 분석 필터
+ * 한글 자모 분석 필터
  *
  * @author hrkim
  *
  */
-public final class JavacafeChosungTokenFilter extends TokenFilter {
+public final class JavacafeJamoTokenFilter extends TokenFilter {
     
-    private KoreanChosungParser parser;
+    private KoreanJamoParser parser;
     private CharTermAttribute termAtt;
-    
-    public JavacafeChosungTokenFilter(TokenStream stream) {
+
+    public JavacafeJamoTokenFilter(TokenStream stream) {
         super(stream);
-        this.parser = new KoreanChosungParser();
+        this.parser = new KoreanJamoParser();
         this.termAtt = addAttribute(CharTermAttribute.class);
     }
     
     /**
-     * 한글 초성 Parser를 이용하여 토큰을 파싱하고 Term을 구한다. 
+     * 한글 자모 Parser를 이용하여 토큰을 파싱하고 Term을 구한다. 
      */
     @Override
     public boolean incrementToken() throws IOException {

@@ -1,4 +1,4 @@
-package org.elasticsearch.index.common.util;
+package org.javacafe.index.common.util;
 
 import java.util.List;
 

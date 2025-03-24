@@ -1,4 +1,4 @@
-package org.elasticsearch.index.common.parser;
+package org.javacafe.index.common.parser;
 
 /**
  * 한글 초성 Parser

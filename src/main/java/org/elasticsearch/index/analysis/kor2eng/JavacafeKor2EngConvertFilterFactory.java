@@ -5,6 +5,7 @@ import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.env.Environment;
 import org.elasticsearch.index.IndexSettings;
 import org.elasticsearch.index.analysis.AbstractTokenFilterFactory;
+import org.javacafe.index.analysis.kor2eng.JavacafeKor2EngConvertFilter;
 
 
 public class JavacafeKor2EngConvertFilterFactory extends AbstractTokenFilterFactory {

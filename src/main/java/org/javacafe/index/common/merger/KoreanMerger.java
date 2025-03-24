@@ -1,8 +1,8 @@
-package org.elasticsearch.index.common.merger;
+package org.javacafe.index.common.merger;
 
 import java.util.List;
 
-import org.elasticsearch.index.common.util.HangulUtil;
+import org.javacafe.index.common.util.HangulUtil;
 
 /**
  * 한글 Merger

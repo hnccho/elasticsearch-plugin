@@ -1,9 +1,9 @@
-package org.elasticsearch.index.common.util;
+package org.javacafe.index.common.util;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.elasticsearch.index.common.type.CodeType;
+import org.javacafe.index.common.type.CodeType;
 
 /**
  * 한글 키보드 유틸리티

@@ -2,7 +2,7 @@ package org.apache.solr.index.analysis.chosung;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
-import org.elasticsearch.index.analysis.chosung.JavacafeChosungTokenFilter;
+import org.javacafe.index.analysis.chosung.JavacafeChosungTokenFilter;
 
 import java.util.Map;
 /**

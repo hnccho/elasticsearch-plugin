@@ -1,4 +1,4 @@
-package org.elasticsearch.index.common.util;
+package org.javacafe.index.common.util;
 
 /**
  * 한글 자모 유니코드 유틸리티

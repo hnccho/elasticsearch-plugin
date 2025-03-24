@@ -1,9 +1,9 @@
-package org.elasticsearch.index.common.converter;
+package org.javacafe.index.common.converter;
 
 import org.apache.commons.lang3.StringUtils;
-import org.elasticsearch.index.common.type.CodeType;
-import org.elasticsearch.index.common.util.JamoUtil;
-import org.elasticsearch.index.common.util.KeyboardUtil;
+import org.javacafe.index.common.type.CodeType;
+import org.javacafe.index.common.util.JamoUtil;
+import org.javacafe.index.common.util.KeyboardUtil;
 
 /**
  * 한영 오타 변환기 (Kor -> Eng)

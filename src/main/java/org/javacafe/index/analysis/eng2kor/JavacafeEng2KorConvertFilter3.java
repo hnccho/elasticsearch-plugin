@@ -1,10 +1,10 @@
-package org.elasticsearch.index.analysis.eng2kor;
+package org.javacafe.index.analysis.eng2kor;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
-import org.elasticsearch.index.common.converter.EngToKorConverter;
+import org.javacafe.index.common.converter.EngToKorConverter;
 
 import java.io.IOException;
 import java.util.LinkedList;
